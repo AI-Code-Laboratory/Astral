@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Astral — trace ta constellation</title>
+<meta name="description" content="Un suivi d'habitudes qui transforme chaque jour tenu en étoile, et chaque série en constellation." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="bg-stars"></canvas>
+
+<header class="hero">
+  <p class="eyebrow">astral</p>
+  <h1>Chaque jour tenu<br>allume une étoile.</h1>
+  <p class="subhead">Reste régulier, et regarde ta propre constellation se dessiner nuit après nuit.</p>
+</header>
+
+<main>
+  <section class="sky-panel" aria-label="Ta constellation">
+    <svg id="constellation" viewBox="0 0 800 320" preserveAspectRatio="xMidYMid meet"></svg>
+    <p class="sky-caption" id="sky-caption">Ajoute une habitude pour commencer à écrire le ciel.</p>
+  </section>
+
+  <section class="habits-panel">
+    <div class="panel-head">
+      <h2>Habitudes</h2>
+      <button id="add-habit-btn" class="btn-primary">+ Nouvelle habitude</button>
+    </div>
+
+    <form id="add-habit-form" class="add-form hidden">
+      <input type="text" id="habit-name" placeholder="Ex. Lire 10 minutes" maxlength="40" required />
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Créer</button>
+        <button type="button" id="cancel-add" class="btn-ghost">Annuler</button>
+      </div>
+    </form>
+
+    <ul id="habit-list" class="habit-list"></ul>
+
+    <p id="empty-state" class="empty-state">
+      Le ciel est vide pour l'instant.<br>
+      Ta première habitude sera ta première étoile.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>Tes données restent dans ce navigateur — aucun compte, aucun serveur.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

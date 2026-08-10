@@ -1,57 +1,33 @@
-# ✦ Astral
+# Astral — Constellation Habit Tracker
 
-**Chaque jour tenu allume une étoile.**
+A minimalist, privacy-first habit tracker that turns your daily consistency into an evolving starry sky, where habits light up as stars and form constellations as you maintain your streaks.
 
-Astral est un suivi d'habitudes minimaliste qui transforme ta régularité en ciel étoilé. Chaque habitude devient une étoile : plus ta série de jours consécutifs est longue, plus elle brille. Coche-la aujourd'hui, et elle s'illumine en or.
+This project is part of AI Code Laboratory, a collection of projects developed with the assistance or generation of artificial intelligence.
 
-Pas de compte, pas de serveur, pas de tracking : tout reste dans le `localStorage` de ton navigateur.
+## Description
 
-## Aperçu
+Astral provides a poetic and visual way to track daily habits without friction or accounts. Each habit is represented by a star in a custom SVG sky; the more consistent you are, the larger and brighter your stars glow. Completing a habit for the day lights up its star in gold and connects it to the rest of your constellation.
 
-- **Une constellation vivante** — chaque habitude occupe une position fixe dans le ciel, reliée aux autres comme une vraie constellation.
-- **La taille = la constance** — le rayon de l'étoile grandit avec le nombre de jours consécutifs.
-- **Zéro friction** — ajouter une habitude, cocher le jour, et c'est tout.
-- **100 % local** — aucune donnée envoyée nulle part, aucune dépendance à un backend.
+Key features include:
+- SVG-rendered interactive constellation map that scales with habit completion streaks.
+- Dynamic background particle effect with canvas-rendered twinkling stars.
+- Local-first architecture: 100% private data stored strictly within the browser's `localStorage`.
+- Zero setup, dependencies, or external framework requirements.
+- Accessible UI with keyboard navigation and `prefers-reduced-motion` support.
 
-## Stack
+## Technologies
 
-Vanilla HTML / CSS / JavaScript. Aucune dépendance, aucun build. Le projet tient dans trois fichiers :
+- HTML5 (Semantic structure & SVG graphics)
+- CSS3 (Custom properties, dark theme gradients, blur filters)
+- Vanilla JavaScript (ES6+, Canvas API, LocalStorage API)
+- Claude (Anthropic), used to generate the code
 
-```
-index.html   → structure de la page
-style.css    → identité visuelle (thème nocturne)
-app.js       → logique : stockage, streaks, rendu du ciel en SVG
-```
+## Installation
 
-## Lancer le projet en local
+No external packages, node modules, or build tools are required.
 
-Aucune installation nécessaire — c'est du HTML statique.
+Make sure you have a modern web browser installed.
 
+Clone the repository:
 ```bash
-git clone https://github.com/<ton-pseudo>/astral-habits.git
-cd astral-habits
-```
-
-Puis ouvre simplement `index.html` dans ton navigateur, ou sers le dossier avec un petit serveur local :
-
-```bash
-python3 -m http.server 8000
-# → http://localhost:8000
-```
-
-## Déployer sur GitHub Pages
-
-1. Va dans **Settings → Pages** du dépôt.
-2. Source : branche `main`, dossier `/ (root)`.
-3. Enregistre. Le site sera disponible à `https://<ton-pseudo>.github.io/astral-habits/` en quelques minutes.
-
-## Idées d'évolution
-
-- Export / import des données en JSON
-- Historique complet par habitude (pas seulement la série en cours)
-- Mode clair
-- Rappels via notifications navigateur
-
-## Licence
-
-MIT — fais-en ce que tu veux, voir [LICENSE](LICENSE).
+git clone [https://github.com/AI-Code-Laboratory/astral-habits.git](https://github.com/AI-Code-Laboratory/astral-habits.git)
